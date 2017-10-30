@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="350dp"
+    android:layout_margin="32dp"
+    android:id="@+id/item_root"
+    android:background="@drawable/item_bkg">
+
+    <TextView
+        android:text="Item 1"
+        android:id="@+id/item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:textColor="@android:color/white"
+        android:textSize="24sp" />
+
+    <View
+        android:layout_above="@+id/item_cont"
+        android:layout_width="96dp"
+        android:layout_marginStart="32dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="64dp"
+        android:background="@color/large_divider"/>
+
+    <LinearLayout
+        android:id="@+id/item_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/item_radio_group"
+            android:layout_margin="16dp"
+            layout="@layout/radio_group_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View style="@style/ItemDivider"/>
+
+        <include
+            android:id="@+id/item_switch"
+            android:layout_margin="16dp"
+            layout="@layout/switch_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View style="@style/ItemDivider"/>
+    </LinearLayout>
+
+</RelativeLayout>
